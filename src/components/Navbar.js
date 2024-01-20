@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function Navbar(props) {
     return (
         <>
-            <header>
+            <header style={props.mode}>
                 <span className="title">{props.title}</span>
                 <nav>
                     <li className="nav-items"><a href="/">{props.link1}</a></li>

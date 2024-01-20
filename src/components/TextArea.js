@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function TextArea() {
+export default function TextArea(props) {
     const [text, setText] = useState("")
 
     const onChangeHandler = (e) => {
@@ -30,7 +30,7 @@ export default function TextArea() {
     return (
         <>
             <label htmlFor='userInput'>Enter text below to change</label><br></br>
-            <textarea id='userInput' value={text} onChange={onChangeHandler}></textarea><br />
+            <textarea style={props.mode} id='userInput' value={text} onChange={onChangeHandler}></textarea><br />
             <button onClick={uppercaseHandler}>Convert to uppercase</button>
             <button onClick={lowercaseHandler}>Convert to lowercase</button>
             <button onClick={inversecaseHandler}>Convert to inversecase</button>
