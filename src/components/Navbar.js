@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
     return (
@@ -7,8 +8,8 @@ export default function Navbar(props) {
             <header style={props.mode}>
                 <span className="title">{props.title}</span>
                 <nav>
-                    <li className="nav-items"><a href="/">{props.link1}</a></li>
-                    <li className="nav-items"><a href="/">{props.link2}</a></li>
+                    <li className="nav-items"><Link to="/">{props.link1}</Link></li>
+                    <li className="nav-items"><Link to="/about">{props.link2}</Link></li>
                     <li className="nav-items"><a href="/">{props.link3}</a></li>
                     <li className="nav-items"><a href="/">{props.link4}</a></li>
                 </nav>
